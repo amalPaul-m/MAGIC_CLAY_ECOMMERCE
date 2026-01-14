@@ -1,8 +1,8 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import axios from "axios";
 import { MdLogout } from "react-icons/md";
+import api from "@/api/axiosApi"
 
 
 const LogoutButton = () => {
@@ -10,7 +10,7 @@ const LogoutButton = () => {
 
   const handleLogout = async () => {
     try {
-      axios.post("http://localhost:3000/auth/logout", {}, { withCredentials: true });
+      api.post("/auth/logout");
       router.replace("/"); 
     } catch (err) {
       console.error("Logout failed:", err);

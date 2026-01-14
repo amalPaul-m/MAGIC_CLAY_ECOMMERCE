@@ -4,6 +4,8 @@ import { checkSession } from '../middlewares/checkSession.js';
 
 const router = express.Router();
 
+//get user data
+
 router.get('/', checkSession, users)
 
 

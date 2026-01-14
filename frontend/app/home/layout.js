@@ -6,13 +6,13 @@ import AuthGuard from "@/components/auth.js";
 export default function RootLayout({ children }) {
   return (
     <AuthGuard>
-    <ProductProvider>
-      <CartProvider>
-        <UsersProvider>
-          {children}
-        </UsersProvider>
-      </CartProvider>
-    </ProductProvider>
+      <ProductProvider>
+        <CartProvider>
+          <UsersProvider>
+            {children}
+          </UsersProvider>
+        </CartProvider>
+      </ProductProvider>
     </AuthGuard>
   );
 }

@@ -18,7 +18,6 @@ const ProductCard = ({item}) => {
       />
       <div className="absolute inset-0 bg-black/20"></div>
 
-
       <div className="absolute bottom-0 z-20 h-32 w-full translate-y-full rounded-t-xl bg-white/90 p-3 transition-transform duration-300 ease-out group-hover:translate-y-0">
         <p className="pt-2 ps-2 text-lg font-bold text-gray-800">
             {item.name}

@@ -1,7 +1,6 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState } from "react";
-import axios from "axios";
 import api from "@/api/axiosApi"
 
 const CartContext = createContext();
