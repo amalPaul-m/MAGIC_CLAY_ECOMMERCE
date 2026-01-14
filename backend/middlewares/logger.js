@@ -6,7 +6,7 @@ const logFilePath = path.join(process.cwd(), "logs.txt");
 
 const logger = (req, res, next) => {
   const now = new Date().toISOString();
-  const logMessage = `[${now}] ${req.method} ${req.originalUrl} Body: ${JSON.stringify( {})}\n`;
+  const logMessage = `[${now}] ${req.method} ${req.originalUrl} Body: ${JSON.stringify({})}\n`;
 
   fs.appendFile(logFilePath, logMessage, (err) => {
     if (err) {
