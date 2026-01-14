@@ -18,7 +18,7 @@ const LogoutButton = () => {
   };
 
   return (
-    <button onClick={handleLogout} className="cursor-pointer flex items-center gap-3 text-gray-700 font-medium hover:text-black transition">
+    <button onClick={handleLogout} className="mb-20 cursor-pointer flex items-center gap-3 text-gray-700 font-medium hover:text-black transition">
     <MdLogout size={20} />
     Logout
     </button>

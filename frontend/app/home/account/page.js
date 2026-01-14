@@ -14,7 +14,6 @@ const Page = () => {
 
     const { cart } = useCart()
     const { user, loading } = useUser()
-    const [email, setEmail] = useState(user.email)
     const [gender, setGender] = useState('')
 
     { loading && <PreLoader /> }
@@ -40,7 +39,8 @@ const Page = () => {
                             <CiMail className="absolute right-3 top-13 -translate-y-1/2 text-gray-400 pointer-events-none" />
                             <input
                                 type="email"
-                                value={email}
+                                value={user?.email || ""}
+                                readOnly
                                 className="w-full h-12 border bg-white border-gray-300 rounded-xl py-2 pr-10 pl-3 focus:outline-none focus:ring-2 focus:ring-black"
                             />
                         </div>
